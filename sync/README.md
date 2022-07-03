@@ -46,9 +46,10 @@ Atlas 에 동기화를 위한 클러스터를 준비 합니다.
 
 동기화 계정의 경우 Atlas 의 계정은 반드시 AtlasAdmin권한을 가지고 있어야 합니다. 또한 Reverse 가 가능하기 위해서는 다음과 같은 custom role 을 추가 하여야 합니다.   
 MongoDB 6 에는 다음과 두개의 Role 이 추가 되었습니다. (데이터 쓰기에 대한 Block을 제어 하기 위한 권한)   
-<img src="/sync/images/image07.png" width="90%" height="90%">   
+<img src="/sync/images/image07.png" width="60%" height="60%">    
+
 계정에 추가한 권한을 추가 하여 생성 하여 줍니다.    
-<img src="/sync/images/image08.png" width="90%" height="90%">   
+<img src="/sync/images/image08.png" width="70%" height="70%">   
 
 Sync가 구동될 컴퓨트에서 Atlas 클러스터에 접근 합니다. (Sync는 DNS Seed list 연결 주소 형식 mongodb+srv를 지원 하지 않음으로 표준 연결 주소로 접근 테스트 합니다.)
 
@@ -102,11 +103,19 @@ $ curl localhost:27182/api/v1/progress -XGET
 
 ##### Sync Start
 cluster0, cluster1 2개 클러스터가 등록 되어 있으며 Cluster0 을 소스로 지정 하고 Cluster1을 목적지로 지정 합니다
+다음은 Reverse를 테스트 해보기 위한 것으로 reversible, enableUserWirteBlock 을 설정하여 시작 한 것입니다.   
 ````
 $ curl localhost:27182/api/v1/start -XPOST --data '{ "source":"cluster0","destination":"cluster1","reversible":true,"enableUserWriteBlocking":true}'
 {"success":true}
 
 ````
+단순한 동기화 테스트의 경우 다음으로 실행 하여 줍니다
+````
+$ curl localhost:27182/api/v1/start -XPOST --data '{ "source":"cluster0","destination":"cluster1"}'
+{"success":true}
+
+````
+
 목적지인 Atlas 의 데이터를 확인 하면 다음과 같이 데이터가 생성 된 것을 확인 할 수 있습니다.
 <img src="/sync/images/image03.png" width="90%" height="90%">    
 
