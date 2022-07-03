@@ -193,11 +193,11 @@ Atlas atlas-ka9jxe-shard-0 [primary] idx> for (var idx = 0; idx < 10000; idx++) 
   insertedId: ObjectId("62c0f74d49f86411a5cf49a9")
 }
 Atlas atlas-ka9jxe-shard-0 [primary] idx> db.scores.find({}).count()
-50000
+40000
 ````
 
 역방향 동기화 확인을 위해 Cluster0에 접속 하여 데이터를 확인 하여 보면 다음과 같이 데이터가 동기화 된것을 알 수 있습니다.   
 ````
 Enterprise source [primary] idx> db.scores.find().count()
-50000
+40000
 ````
