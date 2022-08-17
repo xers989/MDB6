@@ -38,29 +38,29 @@ Orders 와 order_details 관계를 하나의 Orders 컬렉션으로 표현 하�
 <img src="/relationmigrator/images/images09.png" width="90%" height="90%">    
 
 1:N 관계 임으로 Array in parent documents 를 선택 하여 줍니다. 이는 parent 문서 (Order)에 order_details 가 복수개(array)로 표현 되는 것임니다.  이후 Parent collection을 선택 하고 Field 정보중 order_id 는 중복된 값으로 불필요 함으로 uncheck 하여 줍니다
-<img src="/relationmigrator/images/images10.png" width="90%" height="90%"> 
+<img src="/relationmigrator/images/images10.png" width="90%" height="90%">    
 이후 저장 하여 줍니다.
 
-기본적으로 테이블은 하나의 컬렉션으로 매핑됩니다. order_details 의 경우 order 컬렉션의 하위 컬렉션으로 매핑하였음으로 필요 없는 매핑 정보는 삭제 하여 줍니다.
+기본적으로 테이블은 하나의 컬렉션으로 매핑됩니다. order_details 의 경우 order 컬렉션의 하위 컬렉션으로 매핑하였음으로 필요 없는 매핑 정보는 삭제 하여 줍니다.    
 <img src="/relationmigrator/images/images11.png" width="90%" height="90%"> 
 
 
-orders 와 매핑이 되는 정보로 products 테이블을 매핑 하여 줍니다. 이를 위해 products 테이블을 선택 하고 오른쪽 패널에서 Add를 클릭 합니다.
-<img src="/relationmigrator/images/images12.png" width="90%" height="90%"> 
+orders 와 매핑이 되는 정보로 products 테이블을 매핑 하여 줍니다. 이를 위해 products 테이블을 선택 하고 오른쪽 패널에서 Add를 클릭 합니다.    
+<img src="/relationmigrator/images/images12.png" width="90%" height="90%">    
 
 products는 상위 정보로 order_details 의 products_id 와 1:1 관계를 가져 가기 때문에 Fields in child document 를 선택 하고 Parent collection 을 orders를 선택 하여 줍니다. 이후 Root path 는 order_details.product로 하여 줍니다. (문서에 order_details의 하위로 생성 하여줍니다) 데이터의 경우 Product 정보 중 이름과 가격 정보만 order_details 에 보여 줄것임으로 이를 제외한 나머지 필드는 uncheck 하여 줍니다.
-<img src="/relationmigrator/images/images13.png" width="90%" height="90%"> 
+<img src="/relationmigrator/images/images13.png" width="90%" height="90%">    
 매핑 정보를 저장 하여 줍니다.
 
 ### Data Migration
-데이터 마이그레이션 탭을 선택 후 Create Sync job 버튼을 클릭하여 줍니다.
-<img src="/relationmigrator/images/images14.png" width="90%" height="90%"> 
+데이터 마이그레이션 탭을 선택 후 Create Sync job 버튼을 클릭하여 줍니다.    
+<img src="/relationmigrator/images/images14.png" width="90%" height="90%">    
 
 마이그레이션 소스 정보를 입력 하여 줍니다.
-<img src="/relationmigrator/images/images13.png" width="90%" height="90%"> 
+<img src="/relationmigrator/images/images15.png" width="90%" height="90%"> 
 
 대상 정보를 입력 하여 줍니다.
-<img src="/relationmigrator/images/images15.png" width="90%" height="90%"> 
+<img src="/relationmigrator/images/images20.png" width="90%" height="90%"> 
 
 마이그레이션 방법을 선택 하여 주고 작업을 시작 하여 줍니다.
 <img src="/relationmigrator/images/images16.png" width="90%" height="90%"> 
