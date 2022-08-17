@@ -7,27 +7,27 @@
 
 ### Relational Database Source 선택
 Relational Migrator를 실행 하면 브라우저가 오픈 되고 다음주소로 접속 하게 됩니다.    
-<img src="/relationmigrator/images/images02.png" width="90%" height="90%">     
+<img src="/relationmigrator/images/images03.png" width="90%" height="90%">     
 
 현재 버전 v.1.0.28 기준 데이터베이스로 부터 마이그레이션과 schemafile 을 이용한 마이그레이션이 지원 됩니다.   
 준비된 데이터베이스에 접속하여 마이그레이션을 진행 할 것임으로 Connect live database를 선택 합니다.
 
 연결할 데이터베이스 정보를 입력 하여 줍니다. 지원 되는 데이터베이스는 Oracle, SQL Server, MySQL, PostgreSQL등이며 Oracle, SQL Server 의 경우 JDBC Driver 설치가 필요 합니다.
-<img src="/relationmigrator/images/images01.png" width="90%" height="90%">     
+<img src="/relationmigrator/images/images04.png" width="90%" height="90%">     
 
 
 접근하기 위한 JDBC 주소와 계정 정보를 입력 하여 줍니다.
-<img src="/relationmigrator/images/images03.png" width="90%" height="90%">     
+<img src="/relationmigrator/images/images05.png" width="90%" height="90%">     
 
 Connect를 클릭 하면 데이터 베이스에 접근 하여 스키마를 분석하는 작업이 진행 됩니다.
 
 ### Schema 선택
 접속한 데이터베이스의 정보와 테이블 정볼르 볼 수 있습니다. 마이그레이션으로 northwind를 진행 할 것임으로 이를 선택 하여 줍니다.
 
-<img src="/relationmigrator/images/images04.png" width="90%" height="90%">     
+<img src="/relationmigrator/images/images06.png" width="90%" height="90%">     
 
 선택 후 다음을 클릭 한 후 마이그레이션 프로젝트 이름을 지정 하여 줍니다.
-<img src="/relationmigrator/images/images05.png" width="90%" height="90%">     
+<img src="/relationmigrator/images/images07.png" width="90%" height="90%">     
 
 ### Migration Schema 지정
 
