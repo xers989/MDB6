@@ -1,11 +1,11 @@
-### Relational Database Migrator
+## Relational Database Migrator
 운영 중인 Relational Database를 migration 하기 위한 솔루션으로 스키마 전환 및 데이터 migration을 클러스터와 클러스터간 데이터 동기화입니다.
 
 
-##### Relationaal Database Migrator 설치
+### Relationaal Database Migrator 설치
 다음 사이트에서 프로그램을 다운로드 후 설치 합니다.
 
-##### Relational Database Source 선택
+### Relational Database Source 선택
 Relational Migrator를 실행 하면 브라우저가 오픈 되고 다음주소로 접속 하게 됩니다.    
 <img src="/relationmigrator/images/images01.png" width="90%" height="90%">     
 
@@ -20,7 +20,7 @@ Relational Migrator를 실행 하면 브라우저가 오픈 되고 다음주소�
 
 Connect를 클릭 하면 데이터 베이스에 접근 하여 스키마를 분석하는 작업이 진행 됩니다.
 
-##### Schema 선택
+### Schema 선택
 접속한 데이터베이스의 정보와 테이블 정볼르 볼 수 있습니다. 마이그레이션으로 northwind를 진행 할 것임으로 이를 선택 하여 줍니다.
 
 <img src="/relationmigrator/images/images04.png" width="90%" height="90%">     
@@ -28,7 +28,7 @@ Connect를 클릭 하면 데이터 베이스에 접근 하여 스키마를 분�
 선택 후 다음을 클릭 한 후 마이그레이션 프로젝트 이름을 지정 하여 줍니다.
 <img src="/relationmigrator/images/images05.png" width="90%" height="90%">     
 
-##### Migration Schema 지정
+### Migration Schema 지정
 
 분석된 스키마 정보중 orders를 선택 하면 order_details 와 1:N 관계로 지정 된 것을 볼 수 있습니다.
 <img src="/relationmigrator/images/images06.png" width="90%" height="90%">     
@@ -51,7 +51,7 @@ products는 상위 정보로 order_details 의 products_id 와 1:1 관계를 가
 <img src="/relationmigrator/images/images11.png" width="90%" height="90%"> 
 매핑 정보를 저장 하여 줍니다.
 
-##### Data Migration
+### Data Migration
 데이터 마이그레이션 탭을 선택 후 Create Sync job 버튼을 클릭하여 줍니다.
 <img src="/relationmigrator/images/images12.png" width="90%" height="90%"> 
 
@@ -72,7 +72,7 @@ products는 상위 정보로 order_details 의 products_id 와 1:1 관계를 가
 작업이 완료 되면 complete로 상태가 변경 됩니다.
 <img src="/relationmigrator/images/images18.png" width="90%" height="90%"> 
 
-##### Data 확인
+### Data 확인
 MongoDB 에 접속 하여 마이그레이션 데이터를 확인 합니다.
 <img src="/relationmigrator/images/images19.png" width="90%" height="90%"> 
 
