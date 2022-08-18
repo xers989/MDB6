@@ -1,15 +1,17 @@
-## Relational Database Migrator
-운영 중인 Relational Database를 migration 하기 위한 솔루션으로 스키마 전환 및 데이터 migration을 클러스터와 클러스터간 데이터 동기화입니다.
+## Relation Migrator
+운영 중인 관계형 데이터베이스를 migration 하기 위한 솔루션으로 스키마 전환 및 데이터 migration을 클러스터와 클러스터간 데이터 동기화입니다.   
+현재 공식 솔루션이 릴리즈 되어 있지 않으며 Early Access Program을 이용하여 사전에 경험이 가능 합니다.
 
 
-### Relationaal Database Migrator 설치
-다음 사이트에서 프로그램을 다운로드 후 설치 합니다.
+### Relation Migrator 설치
+다음 사이트에서 프로그램을 다운로드 후 설치 합니다. 현재 MongoDB 개발자 커뮤니티 등에 버전에 대한 정보가 공개 되고 있으며 Early Access Program등을 신청 등 하여야 다운로드가 가능 합니다. Migrator 설치는 Mac, Linux, Ubuntu, Windows 를 지원 합니다.
+
 
 ### Relational Database Source 선택
-Relational Migrator를 실행 하면 브라우저가 오픈 되고 다음주소로 접속 하게 됩니다.    
+Relational Migrator를 실행 하면 브라우저가 오픈 되고 다음 주소로 접속 하게 됩니다.    
 <img src="/relationmigrator/images/images03.png" width="90%" height="90%">     
 
-현재 버전 v.1.0.28 기준 데이터베이스로 부터 마이그레이션과 schemafile 을 이용한 마이그레이션이 지원 됩니다.   
+현재 버전 v.1.0.28 기준으로 데이터베이스로 부터 마이그레이션과 schemafile을 이용한 마이그레이션이 지원 됩니다.   
 준비된 데이터베이스에 접속하여 마이그레이션을 진행 할 것임으로 Connect live database를 선택 합니다.
 
 연결할 데이터베이스 정보를 입력 하여 줍니다. 지원 되는 데이터베이스는 Oracle, SQL Server, MySQL, PostgreSQL등이며 Oracle, SQL Server 의 경우 JDBC Driver 설치가 필요 합니다.
@@ -19,17 +21,18 @@ Relational Migrator를 실행 하면 브라우저가 오픈 되고 다음주소�
 접근하기 위한 JDBC 주소와 계정 정보를 입력 하여 줍니다.
 <img src="/relationmigrator/images/images05.png" width="90%" height="90%">     
 
-Connect를 클릭 하면 데이터 베이스에 접근 하여 스키마를 분석하는 작업이 진행 됩니다.
+Connect를 클릭 하면 설정 한 계정을 이용하여 데이터 베이스를연결 하여 스키마를 수집 작업을 진행 합니다.
 
 ### Schema 선택
-접속한 데이터베이스의 정보와 테이블 정볼르 볼 수 있습니다. 마이그레이션으로 northwind를 진행 할 것임으로 이를 선택 하여 줍니다.
+접속한 데이터베이스의 정보와 테이블 정보를 볼 수 있습니다. 마이그레이션으로 northwind를 진행 할 것임으로 이를 선택 하여 줍니다.
 
 <img src="/relationmigrator/images/images06.png" width="90%" height="90%">     
 
 선택 후 다음을 클릭 한 후 마이그레이션 프로젝트 이름을 지정 하여 줍니다.
 <img src="/relationmigrator/images/images07.png" width="90%" height="90%">     
 
-### Migration Schema 지정
+
+### Migration Schema Mapping
 
 분석된 스키마 정보중 orders를 선택 하면 order_details 와 1:N 관계로 지정 된 것을 볼 수 있습니다.
 <img src="/relationmigrator/images/images08.png" width="90%" height="90%">     
@@ -57,13 +60,13 @@ products는 상위 정보로 order_details 의 products_id 와 1:1 관계를 가
 <img src="/relationmigrator/images/images14.png" width="90%" height="90%">    
 
 마이그레이션 소스 정보를 입력 하여 줍니다.
-<img src="/relationmigrator/images/images15.png" width="90%" height="90%"> 
+<img src="/relationmigrator/images/images15.png" width="60%" height="60%"> 
 
 대상 정보를 입력 하여 줍니다.
-<img src="/relationmigrator/images/images20.png" width="90%" height="90%"> 
+<img src="/relationmigrator/images/images20.png" width="60%" height="60%"> 
 
 마이그레이션 방법을 선택 하여 주고 작업을 시작 하여 줍니다.
-<img src="/relationmigrator/images/images16.png" width="90%" height="90%"> 
+<img src="/relationmigrator/images/images16.png" width="60%" height="60%"> 
 
 
 마이그레이션이 진행 됩니다.
