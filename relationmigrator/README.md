@@ -60,13 +60,13 @@ products는 상위 정보로 order_details 의 products_id 와 1:1 관계를 가
 <img src="/relationmigrator/images/images14.png" width="90%" height="90%">    
 
 마이그레이션 소스 정보를 입력 하여 줍니다.    
-<img src="/relationmigrator/images/images15.png" width="60%" height="60%"> 
+<img src="/relationmigrator/images/images15.png" width="50%" height="50%"> 
 
 대상 정보를 입력 하여 줍니다.    
-<img src="/relationmigrator/images/images20.png" width="60%" height="60%"> 
+<img src="/relationmigrator/images/images20.png" width="50%" height="50%"> 
 
 마이그레이션 방법을 선택 하여 주고 작업을 시작 하여 줍니다.    
-<img src="/relationmigrator/images/images16.png" width="60%" height="60%"> 
+<img src="/relationmigrator/images/images16.png" width="50%" height="50%"> 
 
 
 마이그레이션이 진행 됩니다.    
